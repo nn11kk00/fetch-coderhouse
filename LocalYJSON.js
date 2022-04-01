@@ -133,24 +133,25 @@ else{
 // Fetch Sencillo para Desafio const url = "https://pokeapi.co/api/v2/pokemon/76"
 
 
+
     
-    function subPoke(){
-        event.preventDefault() 
-    url = document.getElementById("pokeAvatar").value
+    let urln = Math.floor(Math.random("")*801)
+    let url = `${urln}`
 
 fetch("https://pokeapi.co/api/v2/pokemon/" + url)
     .then(response => response.json())
     .then(data => {
         let element = document.getElementById('element')
         element.innerHTML = `
-        <span>Tu PokeAvatar es: ¡¡¡
+        <span>¡¡¡
         ${data.name}
         <img src="${data.sprites.front_default}"> !!!
         <span>
         `
     })
 
-};
+   
+
 
 
 //Funciones
