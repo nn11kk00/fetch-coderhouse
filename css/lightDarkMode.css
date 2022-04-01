@@ -113,6 +113,10 @@ body.dark .principal .list-ocio li {
   color: white;
 }
 
+.textPokeAvatar {
+  text-transform: capitalize;
+}
+
 .list-ocio ul li {
   text-decoration: none;
   list-style: none;

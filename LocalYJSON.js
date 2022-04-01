@@ -141,10 +141,11 @@ else{
 fetch("https://pokeapi.co/api/v2/pokemon/" + url)
     .then(response => response.json())
     .then(data => {
+
         let element = document.getElementById('element')
         element.innerHTML = `
-        <span>¡¡¡
-        ${data.name.toUpperCase()}
+        <span class="textPokeAvatar">¡¡¡
+        ${data.name}
         <img src="${data.sprites.front_default}"> !!!
         <span>
         `
