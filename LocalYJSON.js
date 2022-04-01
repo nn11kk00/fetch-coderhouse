@@ -144,7 +144,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/" + url)
         let element = document.getElementById('element')
         element.innerHTML = `
         <span>¡¡¡
-        ${data.name}
+        ${data.name.toUpperCase()}
         <img src="${data.sprites.front_default}"> !!!
         <span>
         `
