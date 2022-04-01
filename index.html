@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Estilos + Font--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- Mi estilo - Modo Light y Dark-->
+     <link rel="stylesheet" href="css/lightDarkMode.css">
+    <title>LOCAL y JSON 2°PRE-ENTREGA Class - Nicolas Capdevielle</title>
+
+    
+    <!-----Sweet alert libreria----->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</head>
+<body>
+    
+   <div class="container pt-2">
+       <button class="cambiarModo" id="cambiarModo">
+           <span>L</span>
+           <span>D</span>
+       </button>
+   </div>
+   
+
+    <div class="principal container list nes-container with-title is-centered mt-5">
+
+        <h1 class="title ">Light y Dark Mode Event - Nicolas Capdevielle</h1>
+       
+       
+      
+            
+        <a href="#" class="nes-badge  d-flex justify-content-start">
+        <span class="is-dark">HOLA!</span>
+        </a>       
+      
+      <div class="icon-list d-flex justify-content-end ">
+            <i class="nes-icon is-medium heart"></i>
+            <i class="nes-icon is-medium heart"></i>
+            <i class="nes-icon is-medium is-half heart"></i>
+        </div>
+   <!---Elige un poke avatar--->
+<div class="formAvatar">
+    <p>Elige tu Pok&eacute;Avatar ༼ つ ◕_◕ ༽つ</p>
+        <form class="pb-4 pt-2" name="form" action="" method="get">
+    
+                <p id="element">  <i style="color:grey;">"Ingresa un numero del 1 al 898 para ver que Poke Avatar eres"</i>      </p>
+                <input type="text" placeholder="PokeAvatar 1 - 898" class="nes-input "  id="pokeAvatar">
+                <button class="nes-btn" onclick="subPoke()">ᓚᘏᗢ</button>
+                
+     
+        </form>
+</div>       
+            
+    <!--- fin del pokeavatar--->   
+      
+
+
+       
+
+        <p class="nes-balloon from-left nes-pointer">
+            ¡¡¡Bienvenidos a tu Lista de Ocio!!! <br> Aca puedes agregar cosas que vayas a realizar y borrarlas cuando la termines  (⌐■_■).
+          </p>
+
+                <div class="fecha p-4">
+                    <div class="row">
+
+                        <div id="fechaTexto" class="col-sm-3"></div>
+                        <div id="fechaNumero" class="col-sm-3"></div>
+                        <div id="fechaMes" class="col-sm-3"></div>
+                        <div id="fechaAnio" class="col-sm-3"></div>
+
+                    </div>
+                </div>
+
+
+            <form onclick="agregarNuevoOcio(event)" class="pb-4 input-btn" >
+
+
+                
+                <input type="text" placeholder="Ocio Pendiente" class="nes-input "  >
+                
+                <button onclick="agregarOcio()" class="agregarOcioBoton nes-btn ">+</button>
+
+
+
+            </form>
+
+            <div class="row list-ocio">
+                <ul>
+                    
+                </ul>
+            </div>
+        
+   </div>
+
+
+    <!-----Mi JS----->
+    <script src="LocalYJSON.js" ></script>
+</body>
+</html>

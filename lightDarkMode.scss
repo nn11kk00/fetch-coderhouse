@@ -1,0 +1,154 @@
+
+$negro: #111111;
+$blanco: #FEFEFE;
+$grisOscuro: #C8C8C8;
+$grisClaroHover: #ACABAB;
+$azul:#3E60E9;
+$azulHover: #9db0ff;
+$rojo: rgb(255, 0, 0);
+$rojoDark: rgb(126, 5, 5);
+$sombraDark: 10px 10px 20px rgba($color: #dbdbdb, $alpha: .5);
+
+/* Fin de variables colores*/
+.nes-input{
+    width: calc(50% - 8px);
+}
+
+.error{
+	color: brown;
+	background-color: yellow;
+	font-weight: bold;
+}
+
+/* End basic */
+
+.cambiarModo{
+	background: #343D5B;
+	border-radius: 1000px;
+	position:relative;
+	cursor: pointer;
+	display: flex;
+	outline: none;
+
+	&::after{
+		content: "";
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		background: #F1F1F1;
+		top: 0;
+		left: 0;
+		right: unset;
+		border-radius: 100px;
+		transform: .3s ease all;
+		box-shadow: 0px 0px 2px 2px rgba($color: #000000, $alpha: .2);
+	}
+	&.active{
+		background: orange;
+		color: black;
+		
+		&::after{
+			right: 0;
+			left: unset;
+		}
+
+	}
+
+	span{
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		display: block;
+		background: none;
+		color: white;
+	}
+
+}
+
+/* L y D mode */
+
+body{
+	transition: .3s ease all;
+
+	&.dark{
+		background: $negro;
+
+		.nes-container{
+			border-color: $blanco;
+		}
+	}
+
+	
+	
+
+}
+
+.principal{
+	transition: .3s ease all;
+
+			body.dark &{
+				
+				
+				.title{
+					background-color: $negro;
+					color: $blanco;
+				}
+
+				.is-dark{
+					background-color: #209cee;
+					box-shadow: 0 0.5em #209cee, 0 -0.5em #209cee, 0.5em 0 #209cee, -0.5em 0 #209cee;
+				}
+				
+				.nes-balloon{
+					box-shadow: $sombraDark;
+				}
+
+				.fecha{
+					color: $blanco;
+				}
+
+				.formAvatar{
+					color: $blanco;
+				}
+
+				input{
+					box-shadow: $sombraDark;
+				}
+
+				.nes-btn{
+					background-color: $azul;
+					color:$blanco;
+
+					&::after{
+						box-shadow: inset -4px -4px $azulHover;
+					}
+				}
+
+				.listaOcio{
+					color: $blanco;
+				}
+				.list-ocio{
+
+					li{
+						color: white;
+					}
+				}
+
+			}
+
+}
+
+//
+
+.list-ocio{
+
+	ul{
+		li{
+			text-decoration: none;
+			list-style: none;
+			padding: 10px 16px;
+			border-radius: 5px;
+		}
+	}
+}
